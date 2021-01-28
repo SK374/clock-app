@@ -1,3 +1,4 @@
+import 'package:clock_app/ui/views/stopwatch_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../constants/export.dart';
@@ -34,6 +35,8 @@ class _HomePageState extends State<HomePage> {
               builder: (BuildContext context, MenuInfo value, Widget child) {
                 if (value.menuType == MenuType.clock)
                   return ClockPage();
+                  if (value.menuType == MenuType.stopwatch)
+                  return StopwatchPage();
                 else if (value.menuType == MenuType.alarm)
                   return AlarmPage();
                 else
