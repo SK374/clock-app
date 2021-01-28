@@ -1,12 +1,12 @@
-import 'package:clock_app/ui/views/stopwatch_page.dart';
+import 'package:clock_app/ui/pages/stopwatch_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../constants/export.dart';
 import '../../data.dart';
 import '../../enums.dart';
 import '../../models/menu_info.dart';
-import '../../ui/views/alarm_page.dart';
-import '../../ui/views/clock_page.dart';
+import 'alarm_page.dart';
+import 'clock_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
