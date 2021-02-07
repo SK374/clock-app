@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import '.././constants/export.dart';
+import '.././constants/theme_data.dart';
 
 class StopwatchPainter extends CustomPainter {
   @override

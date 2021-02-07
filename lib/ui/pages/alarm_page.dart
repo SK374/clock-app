@@ -1,13 +1,10 @@
-import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:intl/intl.dart';
 import '../../alarm_helper.dart';
-import '../../constants/export.dart';
-import '../../data.dart';
+import '../../constants/theme_data.dart';
 import '../../models/alarm_info.dart';
-
-
 import '../../main.dart';
 
 class AlarmPage extends StatefulWidget {
@@ -44,7 +41,7 @@ class _AlarmPageState extends State<AlarmPage> {
       padding: EdgeInsets.symmetric(horizontal: 32, vertical: 64),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
+        children: [
           Text(
             'Alarm',
             style: TextStyle(
@@ -87,12 +84,12 @@ class _AlarmPageState extends State<AlarmPage> {
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
+                          children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
+                              children: [
                                 Row(
-                                  children: <Widget>[
+                                  children: [
                                     Icon(
                                       Icons.label,
                                       color: Colors.white,
@@ -121,7 +118,7 @@ class _AlarmPageState extends State<AlarmPage> {
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
+                              children: [
                                 Text(
                                   alarmTime,
                                   style: TextStyle(
@@ -251,7 +248,7 @@ class _AlarmPageState extends State<AlarmPage> {
                                 // scheduleAlarm();
                               },
                               child: Column(
-                                children: <Widget>[
+                                children: [
                                   Image.asset(
                                     'assets/add_alarm.png',
                                     scale: 1.5,

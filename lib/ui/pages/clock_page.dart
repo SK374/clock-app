@@ -1,7 +1,7 @@
+import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:intl/intl.dart';
-import 'package:flutter/material.dart';
-import '../../constants/export.dart';
+import '../../constants/theme_data.dart';
 import '../views/clock_view.dart';
 
 class ClockPage extends StatefulWidget {
@@ -23,7 +23,7 @@ class _ClockPageState extends State<ClockPage> {
       padding: EdgeInsets.symmetric(horizontal: 32, vertical: 64),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
+        children: [
           Flexible(
             flex: 1,
             fit: FlexFit.tight,
@@ -40,7 +40,7 @@ class _ClockPageState extends State<ClockPage> {
             flex: 2,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
+              children: [
                 DigitalClockWidget(),
                 Text(
                   formattedDate,
@@ -68,7 +68,7 @@ class _ClockPageState extends State<ClockPage> {
             fit: FlexFit.tight,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
+              children: [
                 Text(
                   'Timezone',
                   style: TextStyle(
@@ -79,7 +79,7 @@ class _ClockPageState extends State<ClockPage> {
                 ),
                 SizedBox(height: 16),
                 Row(
-                  children: <Widget>[
+                  children: [
                     Icon(
                       Icons.language,
                       color: CustomColors.primaryTextColor,

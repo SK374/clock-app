@@ -1,8 +1,7 @@
-import 'dart:async';
-import 'dart:math';
 import 'package:flutter/material.dart';
+import 'dart:async';
 import '../../custom_paint/stopwatch_painter.dart';
-import '../../constants/export.dart';
+import '../../constants/theme_data.dart';
 
 class StopwatchPage extends StatefulWidget {
   @override
@@ -27,7 +26,6 @@ class _StopwatchPageState extends State<StopwatchPage> {
       startTimer();
     }
     setState(() {
-      // If string is less than 2 add 0
       stopDispTime =
           (stopwatch.elapsed.inMinutes % 60).toString().padLeft(2, '0') +
               ':' +
@@ -78,7 +76,7 @@ class _StopwatchPageState extends State<StopwatchPage> {
       padding: EdgeInsets.symmetric(horizontal: 32, vertical: 64),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
+        children: [
           Flexible(
             flex: 1,
             fit: FlexFit.tight,
@@ -120,6 +118,9 @@ class _StopwatchPageState extends State<StopwatchPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 RaisedButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   onPressed: () => startStopStopWatch(),
                   color: CustomColors.minHandEndColor,
@@ -130,6 +131,9 @@ class _StopwatchPageState extends State<StopwatchPage> {
                 ),
                 SizedBox(width: 40),
                 RaisedButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   onPressed: startStop ? resetStopWatch : null,
                   color: CustomColors.hourHandStatColor,

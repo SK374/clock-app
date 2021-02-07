@@ -1,12 +1,13 @@
-import 'package:clock_app/ui/pages/stopwatch_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../constants/export.dart';
+import '../../constants/theme_data.dart';
 import '../../data.dart';
 import '../../enums.dart';
 import '../../models/menu_info.dart';
 import 'alarm_page.dart';
 import 'clock_page.dart';
+import 'stopwatch_page.dart';
+import 'timer_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: CustomColors.pageBackgroundColor,
       body: Row(
-        children: <Widget>[
+        children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: menuItems
@@ -39,6 +40,8 @@ class _HomePageState extends State<HomePage> {
                   return StopwatchPage();
                 else if (value.menuType == MenuType.alarm)
                   return AlarmPage();
+                  else if (value.menuType == MenuType.timer)
+                  return TimerPage();
                 else
                   return Container(
                     child: RichText(
@@ -77,7 +80,7 @@ class _HomePageState extends State<HomePage> {
             menuInfo.updateMenu(currentMenuInfo);
           },
           child: Column(
-            children: <Widget>[
+            children: [
               Image.asset(
                 currentMenuInfo.imageSource,
                 scale: 1.5,
